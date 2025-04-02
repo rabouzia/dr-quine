@@ -1,7 +1,7 @@
 # Nom des exécutables
 PROGS = Colleen Grace Sully
 
-# Compilateur et options
+# Compi`qlateur et options
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3
 
@@ -27,3 +27,4 @@ fclean:
 re: fclean all
 
 .PHONY: all clean fclean re
+
