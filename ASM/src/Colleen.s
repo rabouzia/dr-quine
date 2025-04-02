@@ -1,18 +1,16 @@
 ;comment 1
 
-section .data ";comment 1 section .data main:   _return leave ret"
+;section .data 
+	msg db ";comment 1 section .data main:   _return leave ret"
 
+extern _printf
 
 ft_print:
+	mov rdi, msg
 	call _printf
-
 	ret
 
 _main:
-	push rbx
 	;comment 2
 	call ft_print
-	pop rbx
 	ret
-
-
