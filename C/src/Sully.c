@@ -16,21 +16,15 @@
 
 int main()
 {
-	int i = 20;
+	int i = 1000;
 	if (i == 0)
 		return 0;
 	char *filename;
 	char *cmd;
-	printf("sully %d 1\n", i);
-	// printf("1\n");
 	asprintf(&filename, "Sully_%d.c", i);
-	// printf("2\n");
-	printf("STR = [%s]\n", STR);
 	FILE * tmpname = fopen(filename, "w");
 	fprintf(tmpname, STR,10,i, 9, STR, 34, 38);
-	printf("3\n");
 	asprintf(&cmd, "gcc -Wall -Wextra -Werror Sully_%d.c -o Sully_%d && ./Sully_%d &", i,i ,i);
-	printf("cmd = %s\n", cmd);
 	system(cmd);
 
 
