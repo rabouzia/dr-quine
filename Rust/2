@@ -1,9 +1,10 @@
-// comment 1
-fn other_fct() {}
+// comment
+const s: &str = // comment const s: &str = {}; const s1: &str = {{}}; const s2: &str = {{}}; fn main () { println!("{}", A);print!("{}", s1);println!("{}", s);println!("{}", s2);}
+const s1: &str = "const s1: &str = "//comment\nconst s: &str = "; 
+const s2: &str = ";fn main () {print!("{}", s1);println!("{}", s); println!("{}", s2);};"//comment const s2: &str = ";
 
-fn main() {
-	other_fct();
-	// comment 2
-    macro_rules! script {() => {"// comment 1\nfn other_fct() {{}}\n\nfn main() {{\n\tother_fct();\n\t// comment 2\n\tmacro_rules! script {{() => {{{:?}}}}}\n\tprintln!(script!(), script!());\n}}"}}
-    println!(script!(), script!());
+fn main () {
+	print!("{}", s1);
+	println!("{}", s);
+	println!("{}", s2);
 }
