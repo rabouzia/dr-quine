@@ -1,3 +1,4 @@
+int i = 5;
 #define _GNU_SOURCE
 #define STR "#define _GNU_SOURCE%1$c#include <stdio.h>%1$c#include <unistd.h>%1$c"\
 "#include <stdlib.h>%1$c#define STR %5$c%4$s%5$c %1$c"\
@@ -16,7 +17,6 @@
 
 int main()
 {
-	int i = 1000;
 	if (i == 0)
 		return 0;
 	char *filename;

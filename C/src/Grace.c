@@ -1,6 +1,8 @@
 #include <stdio.h>
-#define B(x) int main() { printf("#include <stdio.h>\n#define B(x) " x "\n#define X(s) S(s)\n// comment\n#define S(s) #s\nB(X(B(x)))"); }
+#define M(x) int main() { FILE *f=fopen("Grace_kid.c","w");fprintf(f,"#include <stdio.h>\n#define M(x) " x "\n#define X(s) S(s)\n/*\n Comment\n*/\n#define S(s) #s\nM(X(M(x)))"); }
 #define X(s) S(s)
-// comment
+/*
+ Comment
+*/
 #define S(s) #s
-B(X(B(x)))
+M(X(M(x)))
