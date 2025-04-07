@@ -10,12 +10,11 @@ main:
 	lea rdi, [rel msg]
 	mov esi, 10
 	mov edx, 34
-	mov r8, 9
 	lea rcx, [rel msg]
+	mov r8, 9
 	call ft_print
 	ret
 
 ft_print:
-	lea rdi, [rel msg]
 	call printf
 	ret
