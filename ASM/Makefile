@@ -24,7 +24,8 @@ Colleen:
 	nasm -f $(NASM_FORMAT) src/Colleen.s -o Colleen.o && clang $(CLANG_ARCH) -o Colleen Colleen.o
 
 Grace:
-	nasm -f $(NASM_FORMAT) src/Grace.s -o Grace.o && clang $(CLANG_ARCH) -o Grace Grace.o
+	nasm -f $(NASM_FORMAT) src/Grace.s -o Grace.o && clang $(CLANG_ARCH) -o Grace Grace.o -lc -e _main
+
 
 Sully:
 	nasm -f $(NASM_FORMAT) src/Sully.s -o Sully.o && clang $(CLANG_ARCH) -o Sully Sully.o

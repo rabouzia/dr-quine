@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"*.md": "markdown",
-		"stdlib.h": "c"
+		"stdlib.h": "c",
+		"stdio.h": "c"
 	}
 }
