@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define M(x) int main() { FILE *f=fopen("Grace_kid.c","w");fprintf(f,"#include <stdio.h>\n#define M(x) " x "\n#define X(s) S(s)\n/*\n Comment\n*/\n#define S(s) #s\nM(X(M(x)))"); }
+#define M(x) int main() { FILE *f=fopen("Grace_kid.c","w");fprintf(f,"#include <stdio.h>\n#define M(x) " x "\n#define X(s) S(s)\n/*\n Comment\n*/\n#define S(s) #s\nM(X(M(x)))");fclose(f); }
 #define X(s) S(s)
 /*
  Comment

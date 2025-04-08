@@ -20,6 +20,7 @@ endif
 
 wipe:
 	rm Sully*
+	@echo "\033[1;31m======== sully removed ========\033[0m"
 
 all: $(PROGS)
 
