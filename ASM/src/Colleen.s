@@ -7,12 +7,16 @@ global main
 extern printf
 
 main:
+	push rbp
+	mov rbp, rsp
 	lea rdi, [rel msg]
 	mov esi, 10
 	mov edx, 34
 	lea rcx, [rel msg]
 	mov r8, 9
 	call ft_print
+	mov	rsp, rbp
+	pop rbp
 	ret
 
 ft_print:
