@@ -18,6 +18,9 @@ else
 	EXEC_PREFIX =
 endif
 
+wipe:
+	rm Sully*
+
 all: $(PROGS)
 
 Colleen:
