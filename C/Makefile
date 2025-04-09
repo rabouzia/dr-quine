@@ -19,11 +19,13 @@ Sully: src/Sully.c
 
 wipe:
 	rm Sully*
+	@rm -rf *.dSYM/
+	rm Grace_kid.c
+
 	@echo "\033[1;31m======== sully removed ========\033[0m"
 
 fclean:
 	@rm -f $(PROGS)
-	@rm -rf *.dSYM
 	@echo "\033[1;31m======== executables removed ========\033[0m"
 
 re: fclean all

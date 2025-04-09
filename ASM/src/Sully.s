@@ -24,7 +24,7 @@ main:
 	mov rbp, rsp
 
 	cmp dword [rel i], 0
-	jz fin
+	jle fin
 	sub dword [rel i], 1
 
 	lea rdi, [rel dynstr]

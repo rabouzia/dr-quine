@@ -20,6 +20,7 @@ endif
 
 wipe:
 	rm Sully*
+	rm Grace_kid.s
 	@echo "\033[1;31m======== sully removed ========\033[0m"
 
 all: $(PROGS)
