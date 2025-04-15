@@ -1,26 +1,11 @@
 PROGS = Colleen Grace Sully
-UNAME_S := $(shell uname -s)
-UNAME_M := $(shell uname -m)
 
-ifeq ($(UNAME_S), Darwin)
-	ifeq ($(UNAME_M), arm64)
-		NASM_FORMAT = macho64
-		CLANG_ARCH = -arch x86_64
-		EXEC_PREFIX = arch -x86_64
-	else
-		NASM_FORMAT = macho64
-		CLANG_ARCH =
-		EXEC_PREFIX =
-	endif
-else
-	NASM_FORMAT = elf64
-	CLANG_ARCH =
-	EXEC_PREFIX =
-endif
+NASM_FORMAT = elf64
+CLANG_ARCH =
+EXEC_PREFIX =
 
 wipe:
-	rm Sully*
-	rm Grace_kid.s
+	rm -f Grace_kid.s
 	@echo "\033[1;31m======== sully removed ========\033[0m"
 
 all: $(PROGS)
@@ -36,6 +21,7 @@ Sully:
 
 fclean:
 	rm -f $(PROGS) *.o .tmp
+	rm -f Sully*
 	@echo "======== executables removed ========"
 
 re: fclean all

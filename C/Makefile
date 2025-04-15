@@ -1,11 +1,8 @@
-# Nom des exécutables
 PROGS = Colleen Grace Sully
 
-# Compi`qlateur et options
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3
 
-# Cibles de compilation
 all: $(PROGS)
 
 Colleen: src/Colleen.c
